@@ -35,7 +35,7 @@ dt = []
 face_cascade = cv2.CascadeClassifier('E:/Anaconda3/pkgs/opencv3-3.1.0-py35_0/Library/etc/haarcascades/haarcascade_frontalface_default.xml')
     
 for i in range(0,len(tr_U)):  
-    img = load_img("D:/data1/training/"+str(tr_U[i])+".jpg")
+    img = load_img("E:/data/training/"+str(tr_U[i])+".jpg")
     img = np.array(img, dtype='uint8')
     #gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(img, 1.3, 5)
@@ -95,7 +95,7 @@ model.compile(loss="binary_crossentropy", optimizer=s_gd,metrics=["accuracy"])
 model.fit(np.array(trainData), np.array(trainLabels), nb_epoch=50, batch_size=1)
 
 #Saves the model
-model.save("D:/keras model/model.h5")
+model.save("E:/keras model/model.h5")
    
 (loss, accuracy) = model.evaluate(testData, testLabels,batch_size=128, verbose=1)
 
