@@ -23,7 +23,7 @@ def standardize_image(image, size=(100, 100)):
     return cv2.resize(image, size)
  
 
-tr_df = pd.read_csv('D:/data1/profile.csv')
+tr_df = pd.read_csv('D:/data/profile.csv')
 
 #Image names
 tr_U = tr_df['userid']
@@ -32,7 +32,7 @@ labels = []
 dt = []
 
 
-face_cascade = cv2.CascadeClassifier('C:/Users/Waleed/Anaconda3/pkgs/opencv3-3.1.0-py35_0/Library/etc/haarcascades/haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('D:/Anaconda3/pkgs/opencv3-3.1.0-py35_0/Library/etc/haarcascades/haarcascade_frontalface_default.xml')
     
 for i in range(0,len(tr_U)):  
     img = load_img("D:/data1/training/"+str(tr_U[i])+".jpg")
