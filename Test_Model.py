@@ -31,11 +31,11 @@ testLabels = []
 dt = []
 n_d = pd.DataFrame()
 
-face_cascade = cv2.CascadeClassifier('C:/Users/Waleed/Anaconda3/pkgs/opencv3-3.1.0-py35_0/Library/etc/haarcascades/haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('E:/Anaconda3/pkgs/opencv3-3.1.0-py35_0/Library/etc/haarcascades/haarcascade_frontalface_default.xml')
     
 for i in range(0,len(tr_U)):  
 #for i in range(0,10):
-    img = load_img("D:/data1/test/"+str(tr_U[i])+".jpg")
+    img = load_img("E:/data/test/"+str(tr_U[i])+".jpg")
     img = np.array(img, dtype='uint8')
     
     #gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -63,7 +63,7 @@ testLabels = np.array(testLabels)
 
 
 #print(trainData)
-model = load_model('D:/Keras model/model.h5')
+model = load_model('E:/Keras model/model.h5')
 
 predict = model.predict_classes(testData)
 
