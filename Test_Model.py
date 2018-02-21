@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu May 18 09:21:36 2017
-
 @author: Waleed
 """
 
