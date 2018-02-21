@@ -62,8 +62,6 @@ for i in range(0,len(tr_U)):
             if i > 5:
                 break  
                
-
-
 data = np.array(dt) / 255.0
 
 labels = np_utils.to_categorical(labels, 2)  
