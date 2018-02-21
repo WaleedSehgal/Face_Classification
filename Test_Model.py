@@ -54,9 +54,7 @@ for i in range(0,len(tr_U)):
         tr_U_ids.append(ids)
         gen = tr_df.loc[tr_df['userid'] == ids, 'gender'].iloc[0]
         testLabels.append(gen)
-
         
-
 testData = np.array(dt) / 255.0
 
 testLabels = np.array(testLabels)
